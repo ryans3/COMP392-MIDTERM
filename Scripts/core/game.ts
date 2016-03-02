@@ -112,6 +112,11 @@ var game = (() => {
         spotlight = new SpotLight(0xffffff);
         spotlight.position.set(5.6,23.1,5.4)
         spotlight.rotation.set(-0.8,42.7,19.5)
+        spotlight.castShadow = true;
+        spotlight.shadowCameraNear = 1;
+        spotlight.shadowMapHeight = 2048;
+        spotlight.shadowMapWidth = 2048;
+        
         scene.add(spotlight);
        
         //plane
