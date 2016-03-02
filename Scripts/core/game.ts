@@ -119,6 +119,10 @@ var game = (() => {
         
         scene.add(spotlight);
        
+       // ambientlight
+       ambientlight = new AmbientLight(0xffffff);
+       scene.add(ambientlight);
+       
         //plane
         plane = new gameObject(
             new PlaneGeometry(16,16,1,1),
