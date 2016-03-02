@@ -60,6 +60,7 @@ var game = (() => {
     var c5Geo: CubeGeometry;
     var c5Mat: LambertMaterial;
     
+    var Scene = THREE.Scene;
     var scene: Scene = new Scene();
     var renderer: Renderer;
     var camera: PerspectiveCamera;

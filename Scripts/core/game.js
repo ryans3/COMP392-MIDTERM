@@ -49,6 +49,7 @@ var game = (function () {
     var c5Bod;
     var c5Geo;
     var c5Mat;
+    var Scene = THREE.Scene;
     var scene = new Scene();
     var renderer;
     var camera;
