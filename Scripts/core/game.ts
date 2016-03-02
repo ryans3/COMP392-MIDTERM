@@ -120,7 +120,7 @@ var game = (() => {
         scene.add(spotlight);
        
        // ambientlight
-       ambientlight = new AmbientLight(0xffffff);
+       ambientlight = new AmbientLight(0x090909);
        scene.add(ambientlight);
        
         //plane

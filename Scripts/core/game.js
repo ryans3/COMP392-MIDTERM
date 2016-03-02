@@ -97,7 +97,7 @@ var game = (function () {
         spotlight.shadowMapWidth = 2048;
         scene.add(spotlight);
         // ambientlight
-        ambientlight = new AmbientLight(0xffffff);
+        ambientlight = new AmbientLight(0x090909);
         scene.add(ambientlight);
         //plane
         plane = new gameObject(new PlaneGeometry(16, 16, 1, 1), new LambertMaterial({ color: 0xe79b61 }), 0, 0, 0);
