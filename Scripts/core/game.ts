@@ -35,6 +35,31 @@ import gameObject = objects.gameObject;
 var game = (() => {
 
     // declare game objects
+    var axes: AxisHelper;
+    var plane: Mesh;
+    var ambientlight: AmbientLight;
+    var spotlight: SpotLight;
+    
+    var c1Bod: Mesh;
+    var c1Geo: CubeGeometry;
+    var c1Mat: LambertMaterial;
+    
+    var c2Bod: Mesh;
+    var c2Geo: CubeGeometry;
+    var c2Mat: LambertMaterial;
+    
+    var c3Bod: Mesh;
+    var c3Geo: CubeGeometry;
+    var c3Mat: LambertMaterial;
+    
+    var c4Bod: Mesh;
+    var c4Geo: CubeGeometry;
+    var c4Mat: LambertMaterial;
+    
+    var c5Bod: Mesh;
+    var c5Geo: CubeGeometry;
+    var c5Mat: LambertMaterial;
+    
     var scene: Scene = new Scene();
     var renderer: Renderer;
     var camera: PerspectiveCamera;
@@ -52,6 +77,52 @@ var game = (() => {
 
 
         /* ENTER CODE HERE */
+        //CUBES
+        c1Mat = new LambertMaterial({color: 0x00ff00});
+        c1Geo = new CubeGeometry(7,7,7);
+        c1Bod = new Mesh(c1Geo, c1Mat);
+        c1Bod.position.y = 1;
+        scene.add(c1Bod);
+        
+        c2Mat = new LambertMaterial({color: 0x00ff00});
+        c2Geo = new CubeGeometry(6,6,6);
+        c2Bod = new Mesh(c2Geo, c2Mat);
+        c2Bod.position.y = 2;
+        scene.add(c2Bod);
+        
+        c3Mat = new LambertMaterial({color: 0x00ff00});
+        c3Geo = new CubeGeometry(5,5,5);
+        c3Bod = new Mesh(c3Geo, c3Mat);
+        c3Bod.position.y = 3;
+        scene.add(c3Bod);
+        
+        c4Mat = new LambertMaterial({color: 0x00ff00});
+        c4Geo = new CubeGeometry(4,4,4);
+        c4Bod = new Mesh(c4Geo, c4Mat);
+        c4Bod.position.y = 4;
+        scene.add(c4Bod);
+        
+        c5Mat = new LambertMaterial({color: 0x00ff00});
+        c5Geo = new CubeGeometry(3,3,3);
+        c5Bod = new Mesh(c5Geo, c5Mat);
+        c5Bod.position.y = 5;
+        scene.add(c5Bod);
+        
+        //SpotLight
+        spotlight = new SpotLight(0xffffff);
+        spotlight.position.set(5.6,23.1,5.4)
+        spotlight.rotation.set(-0.8,42.7,19.5)
+        scene.add(spotlight);
+       
+        //plane
+        plane = new gameObject(
+            new PlaneGeometry(16,16,1,1),
+            new LambertMaterial({color: 0xe79b61}),
+            0,0,0);
+        
+        plane.rotation.x = -0.5*Math.PI;
+        plane.rotation.y = -6;
+        scene.add(plane);
         
  
         // add controls
